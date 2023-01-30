@@ -7,15 +7,18 @@ export const ApiCalls = () => {
    
     // const AbortController = new Controller()
 
-    useEffect(() => { 
+    useEffect(
+
+      () => {
       fetch(url)
       .then(res => res.json())
-      .then (data =>{
-         console.log(data.results)
+      .then(data => {
         setUser(data.results)
-        })
-    .catch(err => console.log(err.message))
-    },[])
+      })
+      .catch(err => console.log(err.message))
+    },
+
+    [])
 
   return (
     <div>

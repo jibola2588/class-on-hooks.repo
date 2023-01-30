@@ -3,6 +3,10 @@
 import {useState,useEffect} from 'react'
 import { ApiCalls } from './classes/ApiCall'
 import Count from './classes/Count'
+import FormHandling from './classes/FormHandling'
+import RouterClass from './classes/RouterClass'
+import UnControlledForm from './classes/UnControlledForm'
+import Navbar from './components/Navbar'
 
 
 function App() {
@@ -10,12 +14,15 @@ function App() {
 
   return (
     <div className="App">
-  {show &&  <Count />}
+  {/* {show &&  <Count />}
       <button 
       onClick={() => handleShow(false)}
-      >unmount count</button>
+      >unmount count</button> */}
 
-    
+    {/* <FormHandling /> */}
+    {/* <UnControlledForm /> */}
+    <Navbar />
+    <RouterClass />
     </div>
   )
 }
