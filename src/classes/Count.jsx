@@ -8,11 +8,19 @@ const Count = () => {
       display,setDisplay] = useState(false)
 
 
-    useEffect(() => {
+    useEffect(() =>
+     {
          setCount(count + 1)
 
          return () => {console.log('count has unmounted')} 
-    }, []);
+
+         return () => {
+            setCount(0)
+         }
+    },
+     []);
+
+     
 
   return (
     <div>
@@ -20,6 +28,7 @@ const Count = () => {
       className='text-3xl'
       >count : { count }</p>
       <button 
+      // onClick = { () =>setCount(count + 1)}
       className='p-4 text-2xl'></button>
 
         
