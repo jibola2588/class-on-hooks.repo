@@ -28,6 +28,9 @@ const Navbar = () => {
         <li>
         <Link to='/contact'>Contact</Link>
         </li>
+        <li>
+        <Link to='/users'>users</Link>
+        </li>
       </ul>
     </div>
   );
