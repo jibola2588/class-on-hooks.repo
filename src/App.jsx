@@ -2,6 +2,7 @@
 
 import {useState,useEffect} from 'react'
 import { ApiCalls } from './classes/ApiCall'
+import ComponentA from './classes/context/ComponentA'
 import Count from './classes/Count'
 import FormHandling from './classes/FormHandling'
 import RouterClass from './classes/RouterClass'
@@ -21,8 +22,9 @@ function App() {
 
     {/* <FormHandling /> */}
     {/* <UnControlledForm /> */}
-    <Navbar />
-    <RouterClass />
+    {/* <Navbar />
+    <RouterClass /> */}
+    <ComponentA />
     </div>
   )
 }
