@@ -4,8 +4,8 @@ import {dataContext} from './ComponentA'
 
 const ComponentF = () => {
     const userContext =  useContext(dataContext)
-    // console.log(`user context in component F is ${JSON.stringify(userContext)}`)
-
+    console.log(userContext)
+      const {users,dispatch,count} = userContext;
   return (
     <div>
       <h4 className = 'text-yellow-700'>component F : first greatgrandchild of component A</h4>
@@ -16,18 +16,34 @@ const ComponentF = () => {
     class="h-96 w-full object-cover"
   />
 
-  <h3 class="mt-4 text-xl font-bold text-gray-900">Name : {userContext[1].name}</h3>
+  <h3 class="mt-4 text-xl font-bold text-gray-900">Name : {users[1].name}</h3>
 
   <p class="mt-2 max-w-sm text-gray-700">
-    Gender:  {userContext[1].gender}
+    Gender:  {users[1].gender}
   </p>
   <p class="mt-2 max-w-sm text-gray-700">
-    IsFav:  {userContext[1].isFav}
+    IsFav:  {users[1].isFav}
   </p>
   <p class="mt-2 max-w-sm text-gray-700">
-    Age:  {userContext[1].age}
+    Age:  {users[1].age}
   </p>
 </a>
+
+<h4>count -- {count}</h4>
+
+<button onClick = { 
+  () => dispatch({type:'inc'})
+}>+</button>
+<button 
+onClick = { 
+  () => dispatch({type:'dec'})
+}
+>-</button>
+<button 
+onClick = { 
+  () => dispatch({type:'res'})
+}
+>res</button>
     </div>
   );
 }
