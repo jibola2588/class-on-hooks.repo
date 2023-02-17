@@ -8,6 +8,9 @@ import FormHandling from './classes/FormHandling'
 import RouterClass from './classes/RouterClass'
 import UnControlledForm from './classes/UnControlledForm'
 import Navbar from './components/Navbar'
+import Register from './components/Register'
+import Login from './components/Login'
+import {Routes,Route} from 'react-router-dom'
 
 
 function App() {
@@ -24,9 +27,16 @@ function App() {
     {/* <UnControlledForm /> */}
     {/* <Navbar />
     <RouterClass /> */}
-    <ComponentA />
-    </div>
+    {/* <ComponentA /> */}
+    <Routes>
+      <Route path ='/login' element = {  <Login /> } />
+      <Route path = '/register' element = {   <Register /> } />
+ </Routes  >
+       </div>
   )
 }
 
 export default App
+
+
+

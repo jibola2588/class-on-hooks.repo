@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Contact = () => {
   return (
@@ -8,4 +9,6 @@ const Contact = () => {
   );
 }
 
-export default Contact;
+
+
+export default Contact
